@@ -1,0 +1,18 @@
+[package]
+name = "tlsprobe"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1.11", features = ["full"] }
+tokio-stream = "0.1"
+tokio-rustls = { version = "0.23.3", features = ["dangerous_configuration", "logging", "tls12"]}
+webpki-roots = "*"
+x509-parser = "*"
+clap = "2.33"
+log = "0.4"
+fern = { version = "0.5", features = ["colored"] }
+chrono = "0.4"
+url = "2.2.2"
